@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+$c1: #FFF;
+$c2: #F0F0F0;
+$c3: #c9c9c9;
+
+// $c1: #383838;
+// $c2: rgb(17, 17, 17);
+// $c3: #3f3f3f;
+
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: $c2;
+	font-family: 'Varela Round', sans-serif;
+}
+
+.wrapper {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	// padding: 10px;
+	.price-block {
+		width: 650px;
+		margin: 20px;
+		overflow: hidden;
+		height: auto;
+		background-color: $c1;
+		border-radius: 10px;
+		box-shadow: 0px 1px 20px $c3;
+		display: flex;
+		padding: 0;
+		flex-direction: column;
+		justify-content: space-between;
+		@media (max-width: 665px) {
+			width: 95%;
+		}
+		.text {
+			opacity: 0.8;
+			color: #a0a0a0;
+			margin-top: 5px;
+			line-height: 170%;
+			font-size: 14px;
+		}
+		.block_top {
+			padding: 40px;
+			padding-bottom: 20px;
+			.title {
+				font-weight: bold;
+				font-size: 22px;
+				color: #4ABEBD;
+				letter-spacing: 1.1px;
+				margin-bottom: 25px;
+			}
+			.subtitle {
+				color: #BFDF32;
+				font-weight: bold;
+				opacity: 0.8;
+				margin-bottom: 10px;
+			}
+		}
+		.block_bottom {
+			display: flex;
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+			background-color: #4ABEBD;
+			color: #fff;
+			@media (max-width: 590px) {
+				flex-direction: column;
+			}
+			& > div {
+				min-width: 40%;
+				padding: 35px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				@media (max-width: 590px) {
+					width: 90%;
+					min-width: 0;
+					padding: 25px;
+				}
+			}
+			.minititle {
+				font-weight: bold;
+				letter-spacing: 1.1px;
+				margin-bottom: 10px;
+			}
+			.text2 {
+				font-size: 13px;
+				opacity: 0.6;
+				line-height: 165%;
+			}
+			.subscription {
+				background-color: #2BB3B1;
+				border-bottom-left-radius: 10px;
+				.text {
+					margin-top: 15px;
+					color: #ffffff70;
+					font-size: 13px;
+					.price {
+						font-size: 30px;
+						opacity: 1;
+						font-weight: bold;
+						margin-right: 7px;
+						color: #fff;
+					}
+					.price::before {
+						content: '$';
+					}
+				}
+				.text2 {
+					margin-top: 0;
+				}
+				.sign-up {
+					margin: 10px auto 0;
+					background-color: #BFDF32;
+					width: 100%;
+					height: 45px;
+					color: #fff;
+					border-radius: 5px;
+					border: none;
+					cursor: pointer;
+					font-weight: bold;
+					font-size: 13px;
+					box-shadow: 0px 0px 15px #28A288;
+					transition: all ease-in-out 0.3s;
+					&:hover {
+						background-color: #abc72e;
+					}
+					@media (max-width: 500px) {
+						width: 80%;
+					}
+				}
+			}
+			.whyus {
+
+			}
+		}
+	}
+}
